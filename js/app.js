@@ -16,19 +16,24 @@ greeting();
 
 
 // this variable will count the number of questions the user guessed correctly.
+
 let correctGuesses = 0;
 
-let firstQ = prompt('Did i serve in the Military?');
-let firstFont = firstQ.toLowerCase();
-if(firstFont === 'yes' || firstFont === 'y' || firstFont === 'yea'){
-  alert('That\'s correct! I served in the US Navy for 8 years');
-  correctGuesses++;
-}else if(firstFont === 'no' || firstFont === 'n' || firstFont === 'nah'){
-  alert('Sorry that\'s not correct. I did serve in the US Navy for 8 years');
-}else{
-  alert('Please answer with a yes or no!');
+function serviceQ(){
+  let firstQ = prompt('Did i serve in the Military?');
+  let firstFont = firstQ.toLowerCase();
+  if(firstFont === 'yes' || firstFont === 'y' || firstFont === 'yea'){
+    alert('That\'s correct! I served in the US Navy for 8 years');
+    correctGuesses++;
+  }else if(firstFont === 'no' || firstFont === 'n' || firstFont === 'nah'){
+    alert('Sorry that\'s not correct. I did serve in the US Navy for 8 years');
+  }else{
+    alert('Please answer with a yes or no!');
+  }
+  console.log(userName, 'answered the first question:' , firstFont);
 }
-console.log(userName, 'answered the first question:' , firstFont);
+serviceQ();
+
 
 let secondQ = prompt('Did i work in the Aerospace industry?');
 let secondFont = secondQ.toLowerCase();
