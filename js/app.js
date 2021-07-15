@@ -1,6 +1,7 @@
 'use strict';
 
 // this statement asks the visitor for their name using prompt. And the while loop will keep asking for their name until they do so.
+
 function greeting(){
   let userName = prompt('Hello dear visitor, whats your name?');
   console.log(userName);
@@ -16,9 +17,7 @@ greeting();
 
 
 // this variable will count the number of questions the user guessed correctly.
-
 let correctGuesses = 0;
-
 function serviceQ(){
   let firstQ = prompt('Did i serve in the Military?');
   let firstFont = firstQ.toLowerCase();
@@ -33,6 +32,7 @@ function serviceQ(){
   console.log(userName, 'answered the first question:' , firstFont);
 }
 serviceQ();
+
 
 function workQ(){
   let secondQ = prompt('Did i work in the Aerospace industry?');
@@ -50,18 +50,20 @@ function workQ(){
 workQ();
 
 
-
-let thirdQ = prompt('Do I live in Texas?');
-let thirdFont = thirdQ.toLowerCase();
-if(thirdFont === 'no' || thirdFont === 'n' || thirdFont === 'nah'){
-  alert('That\'s correct! I live in Minnesota');
-  correctGuesses++;
-}else if(thirdFont === 'yes' || thirdFont === 'y' || thirdFont === 'yea'){
-  alert('Sorry that\'s not correct. I never lived in Texas');
-}else{
-  alert('Please answer with a yes or no!');
+function homeQ(){
+  let thirdQ = prompt('Do I live in Texas?');
+  let thirdFont = thirdQ.toLowerCase();
+  if(thirdFont === 'no' || thirdFont === 'n' || thirdFont === 'nah'){
+    alert('That\'s correct! I live in Minnesota');
+    correctGuesses++;
+  }else if(thirdFont === 'yes' || thirdFont === 'y' || thirdFont === 'yea'){
+    alert('Sorry that\'s not correct. I never lived in Texas');
+  }else{
+    alert('Please answer with a yes or no!');
+  }
+  console.log(userName, 'answered the third question:' , thirdFont);
 }
-console.log(userName, 'answered the third question:' , thirdFont);
+homeQ();
 
 
 let FourthQ = prompt('Did i graduate from college?');
