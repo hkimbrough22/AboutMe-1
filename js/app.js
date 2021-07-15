@@ -34,18 +34,21 @@ function serviceQ(){
 }
 serviceQ();
 
-
-let secondQ = prompt('Did i work in the Aerospace industry?');
-let secondFont = secondQ.toLowerCase();
-if(secondFont === 'yes' || secondFont === 'y' || secondFont === 'yea'){
-  alert('That\'s correct! I worked in the Aerospace industry as a Value Stream Manager.');
-  correctGuesses++;
-}else if(secondFont === 'no' || secondFont === 'n' || secondFont === 'nah'){
-  alert('Sorry that\'s not correct. I did work in the Aerospace industry');
-}else{
-  alert('Please answer with a yes or no!');
+function workQ(){
+  let secondQ = prompt('Did i work in the Aerospace industry?');
+  let secondFont = secondQ.toLowerCase();
+  if(secondFont === 'yes' || secondFont === 'y' || secondFont === 'yea'){
+    alert('That\'s correct! I worked in the Aerospace industry as a Value Stream Manager.');
+    correctGuesses++;
+  }else if(secondFont === 'no' || secondFont === 'n' || secondFont === 'nah'){
+    alert('Sorry that\'s not correct. I did work in the Aerospace industry');
+  }else{
+    alert('Please answer with a yes or no!');
+  }
+  console.log(userName, 'answered the second question:' , secondFont);
 }
-console.log(userName, 'answered the second question:' , secondFont);
+workQ();
+
 
 
 let thirdQ = prompt('Do I live in Texas?');
