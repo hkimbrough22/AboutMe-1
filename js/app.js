@@ -66,17 +66,20 @@ function homeQ(){
 homeQ();
 
 
-let FourthQ = prompt('Did i graduate from college?');
-let fourthFont = FourthQ.toLowerCase();
-if(fourthFont === 'yes' || fourthFont === 'y' || fourthFont === 'yea'){
-  alert('That\'s correct! I graduated from the University of California Irvine');
-  correctGuesses++;
-}else if(fourthFont === 'no' || fourthFont === 'n' || fourthFont === 'nah'){
-  alert('Sorry that\'s not correct. I graduated from the University of California Irvine');
-}else{
-  alert('Please answer with a yes or no!');
+function educationQ(){
+  let FourthQ = prompt('Did i graduate from college?');
+  let fourthFont = FourthQ.toLowerCase();
+  if(fourthFont === 'yes' || fourthFont === 'y' || fourthFont === 'yea'){
+    alert('That\'s correct! I graduated from the University of California Irvine');
+    correctGuesses++;
+  }else if(fourthFont === 'no' || fourthFont === 'n' || fourthFont === 'nah'){
+    alert('Sorry that\'s not correct. I graduated from the University of California Irvine');
+  }else{
+    alert('Please answer with a yes or no!');
+  }
+  console.log(userName, 'answered the fourth question:' , fourthFont);
 }
-console.log(userName, 'answered the fourth question:' , fourthFont);
+educationQ();
 
 
 let fifthQ = prompt('Have i ever been to Japan?');
