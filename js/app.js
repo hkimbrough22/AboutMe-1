@@ -1,15 +1,19 @@
 'use strict';
 
 // this statement asks the visitor for their name using prompt. And the while loop will keep asking for their name until they do so.
-let userName = prompt('Hello dear visitor, whats your name?');
-console.log(userName);
-while(!userName){
-  alert('Please enter your name');
-  userName = prompt('Lets try this again. Whats your name?');
-}
-alert('Hi ' + userName + ' I would like to thank you for visiting my page!');
+function greeting(){
+  let userName = prompt('Hello dear visitor, whats your name?');
+  console.log(userName);
+  while(!userName){
+    alert('Please enter your name');
+    userName = prompt('Lets try this again. Whats your name?');
+  }
+  alert('Hi ' + userName + ' I would like to thank you for visiting my page!');
 
-alert('Let\'s have a bit of fun ' + userName + ' by playing a guessing game! Please answer with y/n!');
+  alert('Let\'s have a bit of fun ' + userName + ' by playing a guessing game! Please answer with y/n!');
+}
+greeting();
+
 
 // this variable will count the number of questions the user guessed correctly.
 let correctGuesses = 0;
