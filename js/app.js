@@ -82,16 +82,19 @@ function educationQ(){
 educationQ();
 
 
-let fifthQ = prompt('Have i ever been to Japan?');
-let fifthFont = fifthQ.toLowerCase();
-if(fifthFont === 'yes' || fifthFont === 'y' || fifthFont === 'yea'){
-  alert('That\'s correct! I was stationed in Japan for some time while in the Navy');
-  correctGuesses++;
-}else if(fifthFont === 'no' || fifthFont === 'n' || fifthFont === 'nah'){
-  alert('Sorry that\'s not correct. I was stationed in Japan for sometime');
-}else{
-  alert('Please answer with a yes or no!');
-}
-console.log(userName, 'answered the fifth question:' , fifthFont);
+function travelQ(){
+  let fifthQ = prompt('Have i ever been to Japan?');
+  let fifthFont = fifthQ.toLowerCase();
+  if(fifthFont === 'yes' || fifthFont === 'y' || fifthFont === 'yea'){
+    alert('That\'s correct! I was stationed in Japan for some time while in the Navy');
+    correctGuesses++;
+  }else if(fifthFont === 'no' || fifthFont === 'n' || fifthFont === 'nah'){
+    alert('Sorry that\'s not correct. I was stationed in Japan for sometime');
+  }else{
+    alert('Please answer with a yes or no!');
+  }
+  console.log(userName, 'answered the fifth question:' , fifthFont);
 
-alert('Well done ' + userName + '!. You guessed ' + correctGuesses + '/5 correct. Thank you for playing this guessing game with me. Welcome to my page ' + userName + '!');
+  alert('Well done ' + userName + '!. You guessed ' + correctGuesses + '/5 correct. Thank you for playing this guessing game with me. Welcome to my page ' + userName + '!');
+}
+travelQ();
